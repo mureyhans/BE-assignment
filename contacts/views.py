@@ -1,5 +1,5 @@
-from rest_framework import status, viewsets, generics
-from rest_framework.decorators import api_view, action
+from rest_framework import viewsets, generics
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from .models import Contact, ContactList
 from .serializers import ContactSerializer, ContactListSerializer
