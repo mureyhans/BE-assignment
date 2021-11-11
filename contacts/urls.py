@@ -11,5 +11,4 @@ router.register('api/contact-lists', ContactListViewSet, basename='contact-list'
 urlpatterns = [
     path('', include(router.urls)),
     re_path(r'^api/contact-lists/name/(?P<name>.+)/$', views.ContactListDetail.as_view(), name='contact-list-search'),
-    # path('api/contact-lists/<int:pk>/contacts', views.get_contacts_within_contact_list),
 ]

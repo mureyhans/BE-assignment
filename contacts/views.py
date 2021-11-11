@@ -1,4 +1,3 @@
-from django.shortcuts import get_object_or_404
 from rest_framework import status, viewsets, generics
 from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
@@ -62,12 +61,3 @@ class ContactListDetail(generics.ListAPIView):
         name = self.kwargs['name']
         name_to_search = name.replace("_", " ")
         return ContactList.objects.filter(name__icontains=name_to_search)
-
-#
-# @api_view(['GET'])
-# def get_contacts_within_contact_list(request, pk):
-#
-#     if request.method == 'GET':
-#         contacts = Contact.objects.filter(contact_list__id=pk)
-#         serializer = ContactSerializer(contacts, many=True)
-#         return Response(serializer.data)

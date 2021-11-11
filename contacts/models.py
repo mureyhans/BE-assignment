@@ -17,9 +17,3 @@ class ContactList(models.Model):
 
     def __str__(self):
         return self.name
-
-
-# class ContactListDetail(models.Model):
-#     contact = models.ForeignKey(Contact, null=True, on_delete=models.SET_NULL)
-#     contact_list = models.ForeignKey(ContactList, on_delete=models.CASCADE)
-#     date_joined = models.DateField()
