@@ -2,7 +2,7 @@
 This is a mini-project about Contact API using Django-Rest-Framework.
 
 ## Prerequisites ##
-- Install Docker. To install Docker on Mac you can follow the steps explained [here](https://docs.docker.com/docker-for-mac/install/).
+- Install Docker. To install Docker on Mac you can follow these steps explained [here](https://docs.docker.com/docker-for-mac/install/).
 
 ## How to Run ##
 1. Clone this repository 
