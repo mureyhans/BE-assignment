@@ -40,7 +40,7 @@ class ContactTests(APITestCase):
 
     def test_CRD_list_contact_list(self):
         """
-        API Test for: Create, Retrieve, Delete and List Contact
+        API Test for: Create, Retrieve, Delete and List Contact List
         """
 
         # create
@@ -79,9 +79,9 @@ class ContactTests(APITestCase):
 
     def test_list_contact_from_particular_contact_list(self):
         # populate Contact
-        contact_a = Contact(phone_num='0123456', name='Contact A')
+        contact_a = Contact(phone_num='012345690')
         contact_a.save()
-        contact_b = Contact(phone_num='6543210', name='Contact B')
+        contact_b = Contact(phone_num='6543210099', name='Contact B')
         contact_b.save()
         contacts = [contact_a, contact_b]
 
@@ -91,16 +91,16 @@ class ContactTests(APITestCase):
         contact_list_1.contacts.set(contacts)
 
         # list contacts
-        url_detail = reverse('contact-list-get-contacts', kwargs={'pk': 1})
+        url_detail = reverse('contact-list-contacts', kwargs={'pk': 1})
         response = self.client.get(url_detail)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(response.data), 2)
 
     def test_add_remove_contact_from_contact_list(self):
         # populate Contact
-        contact_a = Contact(phone_num='0123456', name='Contact A')
+        contact_a = Contact(phone_num='012345690', name='Contact A')
         contact_a.save()
-        contact_b = Contact(phone_num='6543210', name='Contact B')
+        contact_b = Contact(phone_num='6543210099', name='Contact B')
         contact_b.save()
 
         # populate Contact List
