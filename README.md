@@ -10,7 +10,7 @@ This is a mini-project about Contact API using Django-Rest-Framework.
 3. Open terminal and go to the project folder
 4. Run `docker-compose build`, wait until the build has finished, then
 5. Run `docker-compose up`
-6. Finally, open up your browser and go to `localhost:8000/docs/`
+6. Finally, open up your browser and go to `localhost:8000/docs/` to see the API Documentation.
 
 ## How to Test the API ##
 - Open a new terminal and go to the project:
